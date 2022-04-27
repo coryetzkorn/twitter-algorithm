@@ -11,7 +11,6 @@ export const Tweet = ({ tweet, setTweet }: TweetProps) => {
     <>
       <div className="tweet-wrap">
         <textarea
-          autoFocus={true}
           maxLength={280}
           onChange={(e) => setTweet(e.target.value)}
           placeholder="Type your tweet here"
