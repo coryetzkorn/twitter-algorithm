@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from "react"
-import { Button } from "./Button"
 
 interface TweetProps {
   tweet: string
