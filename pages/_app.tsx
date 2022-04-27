@@ -1,9 +1,11 @@
 import "normalize.css/normalize.css"
 import type { AppProps } from "next/app"
+import { GoogleAnalytics } from "nextjs-google-analytics"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <GoogleAnalytics />
       <Component {...pageProps} />{" "}
       <style global jsx>{`
         html {
