@@ -17,7 +17,7 @@ const Home = () => {
     setRanking(rankResponse)
   }, [tweet])
   const metaUrl = "https://twitter-algorithm.vercel.app"
-  const metaImage = `${metaUrl}/meta.png`
+  const metaImage = `${metaUrl}/meta.jpg`
   const metaTitle = "Twitter Algorithm Rank Validator"
   const metaDescription =
     "See how your tweet performs against the open source Twitter algorithm."
