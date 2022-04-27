@@ -1,6 +1,6 @@
 # Twitter Algorithm
 
-Our algorithm has been a secret since Twitter first began in 2006, but at the request of our new owner, Elon Musk, our algorithm is now in the public domain. We've put it on GitHub for the world to scrutinize and remix.
+Elon Musk recently purchased twitter and has decided to make our algorithm fully open source. We've put it on GitHub for the world to scrutinize and remix.
 
 > "Free speech is the bedrock of a functioning democracy, and Twitter is the digital town square."
 
@@ -13,8 +13,8 @@ Want to see how your tweet will score?
 
 Pro tips:
 
-- Try typing "elon" for 25 points
-- Or "🐸" for 50 points
+- Try typing "elon" for 100 points
+- Include a few of Elon's favorite emojis for 10 points each (🚀 💫 🚘 🍆 ❤️ 🫃)
 
 ### Contributing
 
@@ -29,3 +29,5 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Add new to rules to our algorithm by editing [algorithm.ts](./lib/algorithm.ts).
+
+Pull requests encouraged. This is hunankind's social network now.
