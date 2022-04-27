@@ -16,15 +16,27 @@ const Home = () => {
     const rankResponse = rank(tweet)
     setRanking(rankResponse)
   }, [tweet])
+  const metaUrl = "https://twitter-algorithm.vercel.app/"
+  const metaTitle = "Algorithm Rank Validator | Twitter Developers"
+  const metaDescription =
+    "See how your tweet performs against the open source Twitter algorithm."
   return (
     <>
       <Head>
         <title>Algorithm Rank Validator | Twitter Developers</title>
-        <meta
-          name="description"
-          content="See how your tweet will perform against the official Twitter algorithm."
-        />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={metaDescription} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@NotionHQ" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:url" content={metaUrl} />
+        {/* <meta name="twitter:image" content={computedImageURL} /> */}
+        <meta property="og:url" content={metaUrl} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        {/* <meta property="og:image" content={computedImageURL} /> */}
+        <meta property="og:type" content="website" />
       </Head>
 
       <main className="main">
