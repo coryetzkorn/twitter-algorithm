@@ -23,7 +23,7 @@ export const Tweet = ({ tweet, setTweet }: TweetProps) => {
           <Button
             onClick={() => alert("Coming soon. See real-time score below.")}
           >
-            Rank Tweet
+            Share Ranking
           </Button>
         </div>
       </div>

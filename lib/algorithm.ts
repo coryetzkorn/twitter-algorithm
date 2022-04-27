@@ -35,6 +35,7 @@ export function rank(tweet: string): RankResponse {
     exclamations(tweetData),
     questions(tweetData),
     lowercase(tweetData),
+    uppercase(tweetData),
     hazing(tweetData),
   ]
   const scores = rules.map((item) => item.score)
@@ -300,7 +301,7 @@ function questions({ tweet, sentiment }: TweetData): Rank {
 }
 
 /**
- * Don't ask questions!
+ * We like the nihilistic energy of all lowercase.
  */
 function lowercase({ originalTweet }: TweetData): Rank {
   const isAllLowerCase = originalTweet.toLocaleLowerCase() === originalTweet
@@ -308,6 +309,22 @@ function lowercase({ originalTweet }: TweetData): Rank {
     return {
       score: 40,
       message: `All lowercase. Nihilistic energy.`,
+    }
+  }
+  return {
+    score: 0,
+  }
+}
+
+/**
+ * We love an all caps tweet.
+ */
+function uppercase({ originalTweet }: TweetData): Rank {
+  const isAllCaps = originalTweet.toUpperCase() === originalTweet
+  if (isAllCaps) {
+    return {
+      score: 60,
+      message: `ALL CAPS. BIG ENERGY.`,
     }
   }
   return {
