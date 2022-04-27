@@ -22,7 +22,7 @@ export const Button = ({
           border: 0;
           outline: none;
           padding: 0 1em;
-          font-size: 14px;
+          font-size: 16px;
         }
         button:hover {
           background: var(--darkest-blue);

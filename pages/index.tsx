@@ -78,10 +78,30 @@ const Home = () => {
           <div className="contain">
             <div className="limit">
               <h1>Algorithm Rank Validator</h1>
+              <p className="description">
+                See how your tweet performs against{" "}
+                <a
+                  target="_blank"
+                  href="https://github.com/coryetzkorn/twitter-algorithm/blob/main/lib/algorithm.ts"
+                  rel="noreferrer"
+                >
+                  the open source Twitter algorithm
+                </a>
+                .
+              </p>
               <div className="sides">
                 <div className="side">
                   <h2>Your Tweet</h2>
                   <Tweet tweet={tweet} setTweet={setTweet} />
+                  <div className="actions">
+                    <Button
+                      onClick={() =>
+                        window.scrollTo(0, document.body.scrollHeight)
+                      }
+                    >
+                      See Ranking
+                    </Button>
+                  </div>
                 </div>
                 <div className="side">
                   <h2>Your Ranking</h2>
@@ -144,13 +164,23 @@ const Home = () => {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         .content {
-          margin-top: 60px;
+          padding: 40px 0 100px;
         }
         h1 {
           font-weight: 500;
-          margin: 0 0 40px 0;
+          margin: 0;
           padding-bottom: 15px;
           border-bottom: 1px solid #dbdbdb;
+          line-height: 1.2;
+        }
+        .description {
+          margin: 1em 0 2em 0;
+        }
+        .description a {
+          color: #000;
+        }
+        .description a:hover {
+          color: var(--blue);
         }
         h2 {
           font-weight: 500;
@@ -165,10 +195,22 @@ const Home = () => {
           max-width: 500px;
           margin: 30px 0;
         }
+        .actions {
+          margin-top: 20px;
+        }
         @media screen and (min-width: 860px) {
+          .description {
+            margin: 1em 0 3em 0;
+          }
+          .content {
+            padding: 60px 0;
+          }
           .sides {
             grid-template-columns: 1fr 1fr;
             grid-gap: 60px;
+          }
+          .actions {
+            display: none;
           }
         }
       `}</style>

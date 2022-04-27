@@ -10,22 +10,12 @@ export const Tweet = ({ tweet, setTweet }: TweetProps) => {
   return (
     <>
       <div className="tweet-wrap">
-        <p>
-          See how your tweet performs against the official Twitter algorithm.
-        </p>
         <textarea
           autoFocus={true}
           maxLength={280}
           onChange={(e) => setTweet(e.target.value)}
           placeholder="Type your tweet here"
         />
-        <div className="actions">
-          <Button
-            onClick={() => alert("Coming soon. See real-time score below.")}
-          >
-            Share Ranking
-          </Button>
-        </div>
       </div>
       <style jsx>{`
         .tweet-wrap {
@@ -33,7 +23,7 @@ export const Tweet = ({ tweet, setTweet }: TweetProps) => {
         }
         textarea {
           width: 100%;
-          height: 240px;
+          height: 140px;
           display: block;
           padding: 10px;
           font-size: 16px;
@@ -47,8 +37,10 @@ export const Tweet = ({ tweet, setTweet }: TweetProps) => {
         textarea:focus {
           outline: 2px solid var(--dark-blue);
         }
-        .actions {
-          margin-top: 10px;
+        @media screen and (min-width: 860px) {
+          textarea {
+            height: 240px;
+          }
         }
       `}</style>
     </>
