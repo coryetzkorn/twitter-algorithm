@@ -124,6 +124,16 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <div className="attribution">
+          By{" "}
+          <a
+            target="_blank"
+            href="https://twitter.com/coryetzkorn"
+            rel="noreferrer"
+          >
+            @coryetzkorn
+          </a>
+        </div>
       </main>
       <style jsx>{`
         nav {
@@ -211,7 +221,27 @@ const Home = () => {
         .actions {
           margin-top: 20px;
         }
+        .attribution a {
+          color: var(--dark-blue);
+          text-decoration: none;
+        }
+        .attribution a:hover {
+          color: var(--darkest-blue);
+          text-decoration: underline;
+        }
+        .attribution {
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 12px;
+          margin: 20px;
+        }
         @media screen and (min-width: 860px) {
+          .attribution {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            margin: 0;
+          }
           .description {
             margin: 1em 0 3em 0;
           }
