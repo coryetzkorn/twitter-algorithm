@@ -16,8 +16,7 @@
     "normalize.css": "^8.0.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "sentiment": "^5.0.2",
-    "styled-jsx": "^5.0.2"
+    "sentiment": "^5.0.2"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.182",
