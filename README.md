@@ -34,6 +34,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Add new to rules to our algorithm by editing [algorithm.ts](./lib/algorithm.ts).
 
-Pull requests encouraged. This is hunankind's social network now.
+Pull requests encouraged. This is humankind's social network now.
 
-FREEDOM!
+🇺🇸 FREEDOM! 🇺🇸
