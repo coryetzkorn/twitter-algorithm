@@ -84,7 +84,7 @@ export function rank(tweet: string): RankResponse {
 /**
  * The Ghislaine Maxwell picture didn't happen.
  */
-function elon({ tweet }: TweetData): Rank {
+function ghislaine({ tweet }: TweetData): Rank {
   if (tweet.indexOf("ghislaine") >= 0) {
     return {
       score: -100,
