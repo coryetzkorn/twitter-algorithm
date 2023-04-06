@@ -37,6 +37,7 @@ export function rank(tweet: string): RankResponse {
     lowercase(tweetData),
     uppercase(tweetData),
     hazing(tweetData),
+    usPolitics(tweetData),
   ]
   const scores = rules.map((item) => item.score)
   const validations: Array<Validation> = compact(
@@ -347,6 +348,49 @@ function hazing({ tweet, sentiment }: TweetData): Rank {
     return {
       score: 50,
       message: `Hazing.`,
+    }
+  }
+  return {
+    score: 0,
+  }
+}
+
+/**
+ * U.S. politics is so awesome, and everybody should love to read about it,
+ * no matter their background, interests, or country of residence.
+ * You WILL form an opinion on us!
+ */
+function usPolitics({ tweet, sentiment }: TweetData): Rank {
+  // List of hot topics, power posters, and coronavirus conspiracy
+  const topics = [
+    "🇺🇸", "american?", "patriot", "president", "states", "psyop",
+    "conservatives?", "democrat", "demonrat", "republican", "crt", "woke\\w*",
+    "wokeness", "abortion", "pro-life", "authoritarian", "drag", "ideology",
+    "trump", "biden", "obama", "aoc", "cruz", "bernie", "sanders", "mtg",
+    "ilhan", "pelosi", "lindsey", "mcconnell", "warren", "mccarthy", "kamala",
+    "romney", "tulsi", "gabbard", "rubio", "bannon", "yang", "klobuchar",
+    "crenshaw", "desantis", "buttigieg", "fauci", "feinstein", "cheney",
+    "newsom", "smollett", "beto", "schumer", "hillary", "clinton", "walsh",
+    "capitol", "house bill", "chicago",
+    "vaccine", "vaccines", "pfizer", "wuhan", "mandate", "mandates",
+    "plandemic", "bill gates"
+  ]
+  const r = new RegExp("\\b(?:" + topics.join("|") + ")\\b", "gi")
+  const matches: boolean = !!tweet.match(r)
+  if (matches) {
+    console.log(sentiment)
+    if (sentiment.comparative <= -0.1) {
+      // Downhill U.S. politics is great, you love reading about it
+      return {
+        score: 60,
+        message: "Downhill U.S. politics."
+      }
+    } else {
+      // Normal U.S. politics is decent too
+      return {
+        score: 40,
+        message: "U.S. politics."
+      }
     }
   }
   return {
