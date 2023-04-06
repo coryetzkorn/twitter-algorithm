@@ -378,7 +378,6 @@ function usPolitics({ tweet, sentiment }: TweetData): Rank {
   const r = new RegExp("\\b(?:" + topics.join("|") + ")\\b", "gi")
   const matches: boolean = !!tweet.match(r)
   if (matches) {
-    console.log(sentiment)
     if (sentiment.comparative <= -0.1) {
       // Downhill U.S. politics is great, you love reading about it
       return {
