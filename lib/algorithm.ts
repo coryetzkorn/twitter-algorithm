@@ -363,16 +363,16 @@ function hazing({ tweet, sentiment }: TweetData): Rank {
 function usPolitics({ tweet, sentiment }: TweetData): Rank {
   // List of hot topics, power posters, and coronavirus conspiracy
   const topics = [
-    "🇺🇸", "american?", "patriot", "president", "states", "psyop",
-    "conservatives?", "democrat", "demonrat", "republican", "crt", "woke\\w*",
-    "wokeness", "abortion", "pro-life", "authoritarian", "drag", "ideology",
+    "🇺🇸", "american?s?", "patriots?", "president", "states", "psyop",
+    "conservatives?", "democrats?", "demonrat", "republicans?", "crt", "woke\\w*",
+    "abortion", "pro-life", "authoritarian", "drag", "ideology",
     "trump", "biden", "obama", "aoc", "cruz", "bernie", "sanders", "mtg",
     "ilhan", "pelosi", "lindsey", "mcconnell", "warren", "mccarthy", "kamala",
     "romney", "tulsi", "gabbard", "rubio", "bannon", "yang", "klobuchar",
     "crenshaw", "desantis", "buttigieg", "fauci", "feinstein", "cheney",
     "newsom", "smollett", "beto", "schumer", "hillary", "clinton", "walsh",
-    "capitol", "house bill", "chicago", "amendment", "constitution",
-    "vaccine", "vaccines", "pfizer", "wuhan", "mandate", "mandates",
+    "capitol", "house bill", "chicago", "amendments?", "constitution",
+    "vaccines?", "pfizer", "wuhan", "mandates?",
     "plandemic", "bill gates"
   ]
   const r = new RegExp("\\b(?:" + topics.join("|") + ")\\b", "gi")
