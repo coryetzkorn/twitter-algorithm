@@ -371,7 +371,7 @@ function usPolitics({ tweet, sentiment }: TweetData): Rank {
     "romney", "tulsi", "gabbard", "rubio", "bannon", "yang", "klobuchar",
     "crenshaw", "desantis", "buttigieg", "fauci", "feinstein", "cheney",
     "newsom", "smollett", "beto", "schumer", "hillary", "clinton", "walsh",
-    "capitol", "house bill", "chicago",
+    "capitol", "house bill", "chicago", "amendment", "constitution",
     "vaccine", "vaccines", "pfizer", "wuhan", "mandate", "mandates",
     "plandemic", "bill gates"
   ]
