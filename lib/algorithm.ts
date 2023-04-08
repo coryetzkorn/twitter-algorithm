@@ -128,7 +128,7 @@ function tesla({ tweet, sentiment }: TweetData): Rank {
  * Favor tweets that use emojis Elon likes!
  */
 function emojis({ tweet, sentiment }: TweetData): Rank {
-  const emojis = ["🚀", "💫", "🚘", "🍆", "❤️", "🫃"]
+  const emojis = ["🚀", "💫", "🚘", "🍆", "❤️", "🫃","🤖,"🌞","🌍","🧢","🥳"]
   const matches = emojis.map((emoji) => {
     const regex = new RegExp(emoji, "gi")
     return (tweet.match(regex) || []).length
