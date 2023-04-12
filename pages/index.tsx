@@ -20,7 +20,7 @@ const Home = () => {
   const metaImage = `http://twitter-algorithm.vercel.app/meta.jpg`
   const metaTitle = "Twitter Algorithm Rank Validator"
   const metaDescription =
-    "See how your tweet performs against the open source Twitter algorithm."
+    "See how your tweet performs against Twitter's Open Source algorithm."
   return (
     <>
       <Head>
@@ -98,7 +98,7 @@ const Home = () => {
                   href="https://github.com/coryetzkorn/twitter-algorithm/blob/main/lib/algorithm.ts"
                   rel="noreferrer"
                 >
-                  the open source Twitter algorithm
+                  Twitter's Open Source Algorithm
                 </a>
                 .
               </p>
