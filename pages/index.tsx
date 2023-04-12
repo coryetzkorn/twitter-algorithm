@@ -1,9 +1,8 @@
 import Head from "next/head"
-import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Button } from "../components/Button"
-import { Tweet } from "../components/Tweet"
 import { Ranking } from "../components/Ranking"
+import { Tweet } from "../components/Tweet"
 import { rank } from "../lib/algorithm"
 
 const Home = () => {
@@ -98,7 +97,7 @@ const Home = () => {
                   href="https://github.com/coryetzkorn/twitter-algorithm/blob/main/lib/algorithm.ts"
                   rel="noreferrer"
                 >
-                  Twitter's Open Source Algorithm
+                  Twitterʼs Open Source Algorithm
                 </a>
                 .
               </p>
