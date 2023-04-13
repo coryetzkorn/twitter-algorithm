@@ -24,6 +24,7 @@ export function rank(tweet: string): RankResponse {
     sentiment: theSentimentResponse,
   }
   const rules = [
+    ghislaine(tweetData),
     elon(tweetData),
     tesla(tweetData),
     emojis(tweetData),
@@ -79,6 +80,22 @@ export function rank(tweet: string): RankResponse {
 // Add new rules here!
 // Returning 0 has no impact on score
 // ---------------------------
+
+/**
+ * The Ghislaine Maxwell picture didn't happen.
+ */
+function ghislaine({ tweet }: TweetData): Rank {
+  if (tweet.indexOf("ghislaine") >= 0) {
+    return {
+      score: -100,
+      message: "Fake news.",
+    }
+  }
+  return {
+    score: 0,
+  }
+}
+
 
 /**
  * Always talk about Elon in a positive light.
